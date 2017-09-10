@@ -1,6 +1,5 @@
 require('./config/config');
 
-
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -26,13 +25,6 @@ mongoose.connect(process.env.MONGODB_URI, (err) => {
 		console.log('error');
 	}
 	console.log('connect');
-  // var botek = mongoose.model('User', {name: String});
-  // botek.save((err) => {
-  //   if (err) {
-  //     console.log(err);
-  //   }
-  //   console.log('yeahhh');
-  // });
 });
 
 require('./config/passport')(passport); // pass passport for configuration
